@@ -1,5 +1,5 @@
 # ML-DL-Deployment
-Deployment of ML and DL Projects on Web.
+Deployment of ML and DL Projects on Web using Streamlit.
 
 ## Streamlit : [Streamlit Website](https://www.streamlit.io/)
 
