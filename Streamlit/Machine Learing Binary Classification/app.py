@@ -1,4 +1,5 @@
-import streamlit as st
+# importing the necessary libraries.
+import streamlit as st # only library needed to run the streamlit server and also cover up the web coding part.
 import pandas as pd
 import numpy as np
 from sklearn.svm import SVC
@@ -16,7 +17,7 @@ def main():
     st.markdown("Are your mushrooms edible or not ? 🍄")
     st.sidebar.markdown("Are your mushrooms edible or not ? 🍄")
 
-    @st.cache(persist = True)
+    @st.cache(persist = True) # ensures that when some parameters are updated and the site refreshes no need to load the dataset again.
     def load_data():
         data = pd.read_csv('mushrooms.csv')
         label = LabelEncoder()
@@ -24,7 +25,7 @@ def main():
             data[col] = label.fit_transform(data[col])
         return data
 
-    @st.cache(persist = True)
+    @st.cache(persist = True) # no need to split the dataset again when the site refreshes.
     def split(df):
         y = df.type
         X = df.drop(columns = ['type'], axis = 1)
@@ -118,16 +119,9 @@ def main():
             st.write("Recall : ", recall_score(y_test, y_pred , labels = class_names).round(2))
 
             plot_metrics(metrics)
-    if st.sidebar.checkbox("Show raw data", False):
+    if st.sidebar.checkbox("Show raw data", False): # by default the checkbox should be unchecked.
         st.subheader("Mushroom Dataset")
         st.write(df)
-
-
-
-
-
-
+        
 if __name__ == '__main__':
     main()
-
-
