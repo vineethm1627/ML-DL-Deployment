@@ -1,7 +1,7 @@
 # ML-DL-Deployment
 Deployment of ML and DL Projects 
 
-# Streamlit : [Streamlit Website](https://www.streamlit.io/)
+## Streamlit : [Streamlit Website](https://www.streamlit.io/)
 
 ## Installing Streamlit (Command Line):
 
