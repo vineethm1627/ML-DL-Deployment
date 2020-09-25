@@ -11,6 +11,3 @@ pip install streamlit
 
 streamlit hello
 
-## To run the server and the main app.py file
-
-streamlit run app.py
