@@ -11,3 +11,7 @@ pip install streamlit
 
 streamlit hello
 
+## Creating a pickle file and deploying model:
+
+[article](https://www.geeksforgeeks.org/deploy-a-machine-learning-model-using-streamlit-library/)
+
